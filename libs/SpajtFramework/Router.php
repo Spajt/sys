@@ -1,16 +1,16 @@
 <?php
-
-class Bootstrap {
+namespace libs\SpajtFramework;
+class Router {
 
     function __construct() {
         $_GET['action'] = rtrim($_GET['action'], '/');
         $url = explode("/", $_GET['action']);
-        $file = 'controllers/' . $url[0] . '.php';
         if (file_exists($file)) {
         require $file;
         } else {
-            require 'controllers/error.php';
-            $controller = new Error();
+            echo "Here";
+            $controller = new \controllers\Error();
+            echo $controller;
             return false; 
             
         }

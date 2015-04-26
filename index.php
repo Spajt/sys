@@ -1,4 +1,8 @@
 <?php
-require 'libs/Bootstrap.php';
-$go = new Bootstrap();
+
+spl_autoload_register(function ($class) {
+    include str_replace('\\', DIRECTORY_SEPARATOR, $class).".php";
+});
+
+$go = new libs\SpajtFramework\Router();
 ?>
