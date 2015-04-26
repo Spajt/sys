@@ -7,4 +7,12 @@ class View {
         self::$vars[$key] = $value;
     }
     
+    public static function render($viewFile) {
+        $viewFile = './view/'.$viewFile.".php";
+        if (file_exists($viewFile)) {
+            $viewVars = self::$vars;
+            require_once($viewFile);
+        }
+    }
+    
 }
