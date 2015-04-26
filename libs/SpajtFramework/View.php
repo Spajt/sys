@@ -1,7 +1,8 @@
 <?php
+namespace libs\SpajtFramework;
 class View {
-    static $vars = array(); // the [] operator is not supported by this hosting;
-    static $currentViewFile = '';
+    private static $vars = array(); // the [] operator is not supported by this hosting;
+    private static $currentViewFile = '';
     public static function set($key, $value) {
         self::$vars[$key] = $value;
     }
