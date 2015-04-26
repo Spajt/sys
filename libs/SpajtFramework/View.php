@@ -1,5 +1,4 @@
 <?php
-namespace model;
 class View {
     static $vars = array(); // the [] operator is not supported by this hosting;
     static $currentViewFile = '';
