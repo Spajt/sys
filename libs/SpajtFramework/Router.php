@@ -7,6 +7,8 @@ class Router {
     function __construct() {
         global $mainPage;
         if (@$_GET['action'] === null) {
+            $mainPage = require_once './resources/config.php';
+            $mainPage = $mainPage['mainPage'];
             $scope = new $mainPage;
             $scope->init();
         } else {
